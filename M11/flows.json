@@ -1,0 +1,831 @@
+[
+    {
+        "id": "e6c5f5c1916e8897",
+        "type": "tab",
+        "label": "Pabrik roti",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "145caeab6e233005",
+        "type": "inject",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "9103fc7aa9f8f5ef",
+                "93c319ccc2cec93a",
+                "ccb0a9a9ec834b2a"
+            ]
+        ]
+    },
+    {
+        "id": "0ec3146e13b0aa3d",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/kosong/tepung",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 570,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b76f4d4c2480f096",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9103fc7aa9f8f5ef",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "tepung",
+        "low": "900",
+        "high": "1200",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 40,
+        "wires": [
+            [
+                "0ec3146e13b0aa3d",
+                "b76f4d4c2480f096",
+                "1e7b5a6de81652fd"
+            ]
+        ]
+    },
+    {
+        "id": "93c319ccc2cec93a",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "garam",
+        "low": "100",
+        "high": "200",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "ddaa6e80f9762b3a",
+                "3108ef76893db3d0",
+                "7a987099667ec17e"
+            ]
+        ]
+    },
+    {
+        "id": "ccb0a9a9ec834b2a",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "ragi",
+        "low": "600",
+        "high": "700",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "5f06a6c038ccb4d5",
+                "5e0f8c6e8482600e",
+                "13b1490c1eee822d"
+            ]
+        ]
+    },
+    {
+        "id": "ddaa6e80f9762b3a",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/kosong/garam",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 570,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5f06a6c038ccb4d5",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/kosong/ragi",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 560,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3108ef76893db3d0",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5e0f8c6e8482600e",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8e673c0b27c0a08d",
+        "type": "comment",
+        "z": "e6c5f5c1916e8897",
+        "name": "Roti kosong",
+        "info": "",
+        "x": 130,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2a14e563651ca33f",
+        "type": "inject",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "417b51b67c84a673",
+                "7fa690b6b38e6e2f",
+                "cec71ec2646e4bd7"
+            ]
+        ]
+    },
+    {
+        "id": "756e06de53367f3b",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/coklat/tepung",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1c521e94f6ab8e8a",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "417b51b67c84a673",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "tepung",
+        "low": "900",
+        "high": "1200",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "756e06de53367f3b",
+                "1c521e94f6ab8e8a",
+                "f211946f8fae73f9"
+            ]
+        ]
+    },
+    {
+        "id": "7fa690b6b38e6e2f",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "coklat",
+        "low": "150",
+        "high": "250",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "f187b4f7d0f6d9b4",
+                "053fb4a67a51ea20",
+                "3260583fef891102"
+            ]
+        ]
+    },
+    {
+        "id": "cec71ec2646e4bd7",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "ragi",
+        "low": "600",
+        "high": "700",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 460,
+        "wires": [
+            [
+                "1f804b03b76d1239",
+                "c1de6b65101cf4bd",
+                "02e1f1821f3c2f85"
+            ]
+        ]
+    },
+    {
+        "id": "f187b4f7d0f6d9b4",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/coklat/coklat",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 560,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1f804b03b76d1239",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/coklat/ragi",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 560,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "053fb4a67a51ea20",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c1de6b65101cf4bd",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ce06072c7996ada5",
+        "type": "comment",
+        "z": "e6c5f5c1916e8897",
+        "name": "Roti coklat",
+        "info": "",
+        "x": 120,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a5909973b401bf28",
+        "type": "inject",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "68d576f114d72d32",
+                "5566ebd38e5e0f5e",
+                "6117b4123705ed4a"
+            ]
+        ]
+    },
+    {
+        "id": "4820879ac41ab01b",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/keju/tepung",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 560,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a33d88a4c295f5ae",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "68d576f114d72d32",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "tepung",
+        "low": "900",
+        "high": "1200",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 560,
+        "wires": [
+            [
+                "4820879ac41ab01b",
+                "a33d88a4c295f5ae",
+                "c3f18608b71762ca"
+            ]
+        ]
+    },
+    {
+        "id": "5566ebd38e5e0f5e",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "keju",
+        "low": "150",
+        "high": "250",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 640,
+        "wires": [
+            [
+                "316ddab0f3a8428e",
+                "891f0fe8acfed6bd",
+                "118abc46a257fecd"
+            ]
+        ]
+    },
+    {
+        "id": "6117b4123705ed4a",
+        "type": "random",
+        "z": "e6c5f5c1916e8897",
+        "name": "ragi",
+        "low": "600",
+        "high": "700",
+        "inte": "true",
+        "property": "payload",
+        "x": 330,
+        "y": 720,
+        "wires": [
+            [
+                "714f9704d733139d",
+                "3dee0d3e51371e5d",
+                "3ef8a2fbd9bd7492"
+            ]
+        ]
+    },
+    {
+        "id": "316ddab0f3a8428e",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/keju/keju",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 550,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "714f9704d733139d",
+        "type": "mqtt out",
+        "z": "e6c5f5c1916e8897",
+        "name": "",
+        "topic": "roti/keju/ragi",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "37cddf245b9e154d",
+        "x": 550,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "891f0fe8acfed6bd",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3dee0d3e51371e5d",
+        "type": "debug",
+        "z": "e6c5f5c1916e8897",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "23108deb44841e33",
+        "type": "comment",
+        "z": "e6c5f5c1916e8897",
+        "name": "Roti keju",
+        "info": "",
+        "x": 120,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1e7b5a6de81652fd",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "5757f2e20a0e693e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tepung roti kosong (kot)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 770,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7a987099667ec17e",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "5757f2e20a0e693e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "garam roti kosong (kog)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 770,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "13b1490c1eee822d",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "5757f2e20a0e693e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ragi roti kosong (kor)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 760,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f211946f8fae73f9",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "39411aaf3876d02d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tepung roti coklat(kct)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 760,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3260583fef891102",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "39411aaf3876d02d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coklat roti coklat(kcc)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 760,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "02e1f1821f3c2f85",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "39411aaf3876d02d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ragi roti coklat(kcr)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c3f18608b71762ca",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "af5e8c9475aeed2c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tepung roti keju(ket)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 760,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "118abc46a257fecd",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "af5e8c9475aeed2c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Keju roti keju(kek)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3ef8a2fbd9bd7492",
+        "type": "ui_text",
+        "z": "e6c5f5c1916e8897",
+        "group": "af5e8c9475aeed2c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ragi roti keju(ker)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "37cddf245b9e154d",
+        "type": "mqtt-broker",
+        "name": "sensorserver",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5757f2e20a0e693e",
+        "type": "ui_group",
+        "name": "Kosong",
+        "tab": "30a50c65f0d04553",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "39411aaf3876d02d",
+        "type": "ui_group",
+        "name": "Coklat",
+        "tab": "30a50c65f0d04553",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "af5e8c9475aeed2c",
+        "type": "ui_group",
+        "name": "Keju",
+        "tab": "30a50c65f0d04553",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "30a50c65f0d04553",
+        "type": "ui_tab",
+        "name": "pabrik roti",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
