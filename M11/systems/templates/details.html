@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Details</title>
+    <meta http-equiv="refresh" content="2">
+</head>
+<body>
+    <table border='1'>
+      <tr>
+        <th>Sensor</th>
+        <th>Value</th>
+      </tr>
+      {% for x in sensors %}
+        <tr>
+          <td>{{ x.name }}</td>
+          <td>{{ x.value }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    <table border='1'>
+      <tr>
+        <th>Actuator</th>
+        <th>Value</th>
+      </tr>
+      {% for y in actuators %}
+        <tr>
+          <td>{{ y.name }}</td>
+          <td>{{ y.value }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+</body>
+</html>
